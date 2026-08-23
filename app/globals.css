@@ -18,7 +18,7 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(
 a { color: inherit; text-decoration: none; }
 .siteHeader { max-width: 1280px; margin: 0 auto; min-height: 92px; padding: 0 34px; border-bottom: 1px solid var(--ink); display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .siteName { font: 650 15px var(--mono); letter-spacing: .025em; }
-.siteHeader nav { display: flex; gap: 28px; font: 500 12px var(--mono); color: var(--muted); }
+.siteHeader nav { display: flex; gap: 28px; font: 500 17px var(--mono); color: var(--muted); }
 .siteHeader nav a::before { content: "./"; color: var(--blue); }
 .siteHeader nav a:hover { color: var(--ink); }
 .intro { max-width: 1280px; margin: 0 auto; padding: 46px 34px 48px; display: flex; flex-direction: column; align-items: flex-start; }
