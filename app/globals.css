@@ -60,6 +60,7 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .projectNotes p { margin: 0; color: #53606a; line-height: 1.65; }
 .projectCta { display: block; width: fit-content; margin: 36px 0 10px; padding: 14px 0 6px; border-bottom: 2px solid var(--ink); font: 650 13px var(--mono); }
 .schoolIntro { display: grid; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 50px; padding: 58px 0; }
+.schoolIntro .miniLabel { font-size: 17px; }
 .schoolIntro>div:last-child { color: #4e5c66; font: 500 17px/1.7 var(--mono); }
 .schoolIntro>div:last-child p { margin: 0; }
 .tableTitle { margin: 10px 0 14px; color: var(--orange); font-size: 17px; font-weight: 650; }
