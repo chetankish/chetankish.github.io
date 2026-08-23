@@ -1,11 +1,12 @@
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 const modules = [
-  ["STAT101", "Introduction to Statistical Theory", "Statistical foundations"],
-  ["DATA", "Data Analytics with R", "Data analysis and programming"],
-  ["INFERENCE", "Statistical Inference for Data Science", "Estimation and inference"],
-  ["PROBABILITY", "Probability Theory and Application", "Probability modelling"],
-  ["ECONOMETRICS", "Intermediate Econometrics", "Regression and causal methods"],
+  ["DATA", "Data Analytics with R", "Data Analysis and Programming"],
+  ["INFERENCE", "Statistical Inference for Data Science", "Estimation and Inference"],
+  ["MACHINE LEARNING", "Machine Learning and Applications", "Predictive Modelling"],
+  ["PROBABILITY", "Probability Theory and Application", "Probability Modelling"],
+  ["ECONOMETRICS", "Intermediate Econometrics", "Regression and Causal Methods"],
+  ["STATISTICS", "Introduction to Statistical Theory", "Statistical Foundations"],
 ];
 
 const certificates = [
@@ -44,11 +45,6 @@ export default function Home() {
 
       <section className="intro" aria-labelledby="intro-title">
         <p className="prompt">chetan@portfolio:~$ whoami</p>
-        <h1 id="intro-title">Economics student.<br />Data learner.<br />Curious problem solver.</h1>
-        <p className="introText">
-          I use data to investigate practical questions, test assumptions and explain what the evidence means.
-        </p>
-        <a className="textLink" href="#projects">View selected work <Arrow /></a>
       </section>
 
       <section className="notebookSection about" id="about">
@@ -79,7 +75,7 @@ export default function Home() {
             </div>
             <div>
               <p className="miniLabel">METHODS</p>
-              <p>Data cleaning / visualisation / regression / forecasting / backtesting</p>
+              <p>Data Cleaning / Exploratory Data Analysis / Data Visualisation / Statistical Analysis / Regression Analysis / Forecasting / Model Evaluation</p>
             </div>
           </aside>
         </div>
