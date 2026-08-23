@@ -1,94 +1,182 @@
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
+const modules = [
+  ["STAT101", "Introduction to Statistical Theory", "Statistical foundations"],
+  ["DATA", "Data Analytics with R", "Data analysis and programming"],
+  ["INFERENCE", "Statistical Inference for Data Science", "Estimation and inference"],
+  ["PROBABILITY", "Probability Theory and Application", "Probability modelling"],
+  ["ECONOMETRICS", "Intermediate Econometrics", "Regression and causal methods"],
+];
+
+const certificates = [
+  {
+    date: "AUG 2026",
+    title: "Learning Data Analytics: 1 Foundations",
+    issuer: "LinkedIn Learning",
+    href: "https://www.linkedin.com/learning/certificates/11886c699aadeb728a5f2c0becf4c7f6d812b3292591c69924c0d827275efc63/?trk=share_certificate",
+  },
+  {
+    date: "MAY 2026",
+    title: "Excel and ChatGPT: Data Analysis Power Tips",
+    issuer: "LinkedIn Learning",
+    href: "https://www.linkedin.com/learning/certificates/dc1f9ef1a9904e611667489bd78a276806e4f91191e0567e43561900498d8821/",
+  },
+  {
+    date: "MAY 2026",
+    title: "Algorithmic Trading and Stocks Essential Training",
+    issuer: "LinkedIn Learning",
+    href: "https://www.linkedin.com/learning/certificates/1463d593e213d2dc0e8d6d6cb3e36479a8826848c179875b4257655838e040d7/",
+  },
+];
+
 export default function Home() {
   return (
-    <main>
-      <nav className="nav" aria-label="Primary navigation">
-        <a className="wordmark" href="#top">CK<span>.</span>DATA</a>
-        <div className="navLinks">
+    <main id="top">
+      <header className="siteHeader">
+        <a className="siteName" href="#top">CHETAN KISHNANI / DATA PORTFOLIO</a>
+        <nav aria-label="Primary navigation">
+          <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#modules">SMU Modules</a>
-          <a href="#certificates">Certificates</a>
-        </div>
-      </nav>
+          <a href="#school">School</a>
+          <a href="#certificates">Certs</a>
+        </nav>
+      </header>
 
-      <section className="hero" id="top">
-        <div className="eyebrow"><span /> Data portfolio · Singapore</div>
-        <h1>Chetan<br /><em>Kishnani</em></h1>
-        <div className="heroBottom">
-          <p>Economics × Data Science &amp; Analytics</p>
-          <p className="heroCopy">A focused collection of analytical projects, university modules and certifications—built around evidence, clarity and useful decisions.</p>
-        </div>
+      <section className="intro" aria-labelledby="intro-title">
+        <p className="prompt">chetan@portfolio:~$ whoami</p>
+        <h1 id="intro-title">Economics student.<br />Data learner.<br />Curious problem solver.</h1>
+        <p className="introText">
+          I use data to investigate practical questions, test assumptions and explain what the evidence means.
+        </p>
+        <a className="textLink" href="#projects">View selected work <Arrow /></a>
       </section>
 
-      <section className="section" id="projects">
-        <div className="sectionHead">
-          <p>01 / Selected work</p>
-          <h2>Projects</h2>
-        </div>
-        <article className="featureCard">
-          <div className="projectIndex">01</div>
-          <div className="projectMain">
-            <p className="label">Flagship project · SQL · Forecasting</p>
-            <h3>Singapore HDB Resale Price Drivers &amp; 2031 Forecast</h3>
-            <p>Analysed 977,756 resale transactions from 1990 to May 2026, built a reproducible SQL workflow and compared regression approaches to understand market drivers and forecast a scenario-based 2031 price range.</p>
-            <div className="tags">
-              <span>SQL</span><span>Data cleaning</span><span>Feature engineering</span><span>Regression</span><span>Backtesting</span>
-            </div>
+      <section className="notebookSection about" id="about">
+        <div className="sectionLabel">01 — ABOUT ME</div>
+        <div className="aboutGrid">
+          <div className="aboutCopy">
+            <h2>Hello, I&apos;m Chetan.</h2>
+            <p>
+              I&apos;m an undergraduate at Singapore Management University studying Economics and Data Science &amp; Analytics, with an expected graduation in April 2028.
+            </p>
+            <p>
+              My background in finance and operations made me interested in how evidence can improve decisions. I&apos;m now developing that interest through statistics, econometrics and applied projects—learning how to move from a messy dataset to a conclusion that someone can actually use.
+            </p>
+            <p>
+              This site is a record of that learning: what I have built, what I have studied and the tools I am becoming more confident with.
+            </p>
           </div>
-          <a className="projectLink" href="https://chetankish.github.io/singapore-hdb-resale-price-drivers-2031-forecast/" target="_blank" rel="noreferrer">
-            View interactive report <Arrow />
-          </a>
-        </article>
+
+          <aside className="profilePanel" aria-label="Profile links and skills">
+            <div>
+              <p className="miniLabel">FIND ME</p>
+              <a href="https://www.linkedin.com/in/chetan-kishnani/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
+              <a href="https://github.com/chetankish" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
+            </div>
+            <div>
+              <p className="miniLabel">TOOLS</p>
+              <p>SQL / Excel / R / Python</p>
+            </div>
+            <div>
+              <p className="miniLabel">METHODS</p>
+              <p>Data cleaning / visualisation / regression / forecasting / backtesting</p>
+            </div>
+          </aside>
+        </div>
       </section>
 
-      <section className="learningSection" id="modules">
-        <div className="sectionHead darkHead">
-          <p>02 / Coursework</p>
-          <h2>SMU Modules</h2>
+      <section className="notebookSection" id="projects">
+        <div className="sectionLabel">02 — PROJECTS</div>
+        <div className="projectHeader">
+          <div>
+            <p className="miniLabel">FEATURED CASE STUDY / INDIVIDUAL PROJECT</p>
+            <h2>Singapore HDB Resale Price Drivers &amp; 2031 Forecast</h2>
+          </div>
+          <span className="projectNumber">001</span>
         </div>
-        <div className="moduleGrid">
-          {[
-            ["01", "Introduction to Statistical Theory", "Statistical foundations"],
-            ["02", "Data Analytics with R", "Data analysis & programming"],
-            ["03", "Statistical Inference for Data Science", "Estimation & inference"],
-            ["04", "Probability Theory and Application", "Probability modelling"],
-            ["05", "Intermediate Econometrics", "Causal & regression methods"],
-          ].map(([number, title, focus]) => (
-            <article className="moduleCard" key={number}>
-              <span>{number}</span>
-              <h3>{title}</h3>
+
+        <div className="projectSummary">
+          <p>
+            I examined 977,756 HDB resale transactions from January 1990 to May 2026 to understand the factors associated with resale prices and build a scenario-based forecast towards 2031.
+          </p>
+          <dl className="projectFacts">
+            <div><dt>DATA</dt><dd>977,756 transactions</dd></div>
+            <div><dt>PERIOD</dt><dd>Jan 1990 — May 2026</dd></div>
+            <div><dt>TOOLS</dt><dd>SQL / Excel</dd></div>
+            <div><dt>WORK</dt><dd>Cleaning / EDA / regression / forecasting</dd></div>
+          </dl>
+        </div>
+
+        <div className="processLine" aria-label="Project process">
+          <span>01 FRAME</span><i>→</i><span>02 CLEAN</span><i>→</i><span>03 EXPLORE</span><i>→</i><span>04 MODEL</span><i>→</i><span>05 EVALUATE</span>
+        </div>
+
+        <div className="projectNotes">
+          <div>
+            <h3>Question</h3>
+            <p>Which characteristics and market conditions best explain differences in HDB resale prices, and what might a transparent forecast to 2031 look like?</p>
+          </div>
+          <div>
+            <h3>Approach</h3>
+            <p>I built a structured SQL workflow, prepared and visualised the data in Excel, compared regression approaches and tested forecast performance through backtesting.</p>
+          </div>
+          <div>
+            <h3>Output</h3>
+            <p>The final report connects the data workflow, market context, modelling choices and evaluation results in one interactive explanation for technical and non-technical readers.</p>
+          </div>
+        </div>
+
+        <a className="projectCta" href="https://chetankish.github.io/singapore-hdb-resale-price-drivers-2031-forecast/" target="_blank" rel="noreferrer">
+          OPEN THE INTERACTIVE REPORT <Arrow />
+        </a>
+      </section>
+
+      <section className="notebookSection school" id="school">
+        <div className="sectionLabel">03 — SCHOOL</div>
+        <div className="schoolIntro">
+          <div>
+            <p className="miniLabel">SINGAPORE MANAGEMENT UNIVERSITY</p>
+            <h2>BSc (Economics)</h2>
+          </div>
+          <div>
+            <p>Economics and Data Science &amp; Analytics</p>
+            <p>Expected graduation / April 2028</p>
+          </div>
+        </div>
+        <p className="tableTitle">SELECTED DATA-RELATED MODULES</p>
+        <div className="moduleTable">
+          {modules.map(([code, title, focus]) => (
+            <div className="moduleRow" key={title}>
+              <span>{code}</span>
+              <strong>{title}</strong>
               <p>{focus}</p>
-            </article>
+            </div>
           ))}
         </div>
       </section>
 
-      <section className="certificateSection" id="certificates">
-        <div className="sectionHead">
-          <p>03 / Continuous learning</p>
-          <h2>Certificates</h2>
+      <section className="notebookSection" id="certificates">
+        <div className="sectionLabel">04 — CERTIFICATIONS</div>
+        <div className="certIntro">
+          <h2>Continuous learning,<br />documented.</h2>
+          <p>Selected certificates related to analytics, tools and quantitative thinking.</p>
         </div>
         <div className="certificateList">
-          <a href="https://www.linkedin.com/learning/certificates/11886c699aadeb728a5f2c0becf4c7f6d812b3292591c69924c0d827275efc63/?trk=share_certificate" target="_blank" rel="noreferrer">
-            <span className="certDate">Aug 2026</span><strong>Learning Data Analytics: 1 Foundations</strong><span className="issuer">LinkedIn Learning</span><Arrow />
-          </a>
-          <a href="https://www.linkedin.com/learning/certificates/dc1f9ef1a9904e611667489bd78a276806e4f91191e0567e43561900498d8821/" target="_blank" rel="noreferrer">
-            <span className="certDate">May 2026</span><strong>Excel and ChatGPT: Data Analysis Power Tips</strong><span className="issuer">LinkedIn Learning</span><Arrow />
-          </a>
-          <a href="https://www.linkedin.com/learning/certificates/1463d593e213d2dc0e8d6d6cb3e36479a8826848c179875b4257655838e040d7/" target="_blank" rel="noreferrer">
-            <span className="certDate">May 2026</span><strong>Algorithmic Trading and Stocks Essential Training</strong><span className="issuer">LinkedIn Learning</span><Arrow />
-          </a>
+          {certificates.map((cert) => (
+            <a key={cert.title} href={cert.href} target="_blank" rel="noreferrer">
+              <span>{cert.date}</span>
+              <strong>{cert.title}</strong>
+              <span>{cert.issuer}</span>
+              <Arrow />
+            </a>
+          ))}
         </div>
       </section>
 
       <footer>
-        <a className="wordmark" href="#top">CK<span>.</span>DATA</a>
-        <p>Data projects, learning and applied analysis.</p>
-        <div>
-          <a href="https://www.linkedin.com/in/chetan-kishnani/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
-          <a href="https://github.com/chetankish" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
-        </div>
+        <p>Built as a record of work in progress.</p>
+        <p>Singapore / 2026</p>
+        <a href="#top">BACK TO TOP ↑</a>
       </footer>
     </main>
   );
