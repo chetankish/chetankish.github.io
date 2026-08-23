@@ -43,6 +43,7 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .profilePanel a:hover { border-color: var(--ink); }
 .profilePanel p:last-child { line-height: 1.65; }
 .projectHeader { display: grid; grid-template-columns: 1fr auto; gap: 30px; padding: 62px 0 34px; }
+.projectHeader .miniLabel { font-size: 17px; }
 .projectHeader h2 { max-width: 920px; }
 .projectNumber { font: 500 52px var(--mono); color: #bbc4ca; }
 .projectSummary { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; border-top: 1px solid var(--line); padding: 36px 0; }
