@@ -56,7 +56,7 @@ export default function Home() {
               I&apos;m an undergraduate at Singapore Management University studying Economics and Data Science &amp; Analytics, with an expected graduation in April 2028.
             </p>
             <p>
-              My background in finance and operations made me interested in how evidence can improve decisions. I&apos;m now developing that interest through statistics, econometrics and applied projects—learning how to move from a messy dataset to a conclusion that someone can actually use.
+              My experience in finance and operations showed me how much I enjoy analysing data, uncovering patterns and drawing meaningful conclusions from it. I&apos;m now building on that foundation through statistics, econometrics and hands-on analytics projects as I work towards becoming a data analyst who can turn complex datasets into clear, practical insights.
             </p>
             <p>
               This site is a record of that learning: what I have built, what I have studied and the tools I am becoming more confident with.
