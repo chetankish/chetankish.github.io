@@ -59,15 +59,16 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .projectNotes h3 { margin: 0 0 16px; font: 600 16px var(--mono); color: var(--orange); }
 .projectNotes p { margin: 0; color: #53606a; line-height: 1.65; }
 .projectCta { display: block; width: fit-content; margin: 36px 0 10px; padding: 14px 0 6px; border-bottom: 2px solid var(--ink); font: 650 13px var(--mono); }
-.schoolIntro { display: grid; grid-template-columns: 1.3fr .7fr; align-items: end; gap: 50px; padding: 58px 0; }
-.schoolIntro>div:last-child { color: #4e5c66; font: 500 13px/1.7 var(--mono); }
-.tableTitle { margin: 10px 0 14px; color: var(--orange); font-size: 11px; font-weight: 650; }
+.schoolIntro { display: grid; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 50px; padding: 58px 0; }
+.schoolIntro>div:last-child { color: #4e5c66; font: 500 17px/1.7 var(--mono); }
+.schoolIntro>div:last-child p { margin: 0; }
+.tableTitle { margin: 10px 0 14px; color: var(--orange); font-size: 17px; font-weight: 650; }
 .moduleTable { border-top: 1px solid var(--ink); }
-.moduleRow { display: grid; grid-template-columns: .6fr 1.8fr 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.moduleRow { display: grid; grid-template-columns: .6fr 1.8fr 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: center; }
 .moduleRow span { color: var(--blue); font: 550 11px var(--mono); }
 .moduleRow strong { font: 550 15px var(--mono); }
 .moduleRow p { margin: 0; color: var(--muted); font-size: 14px; }
-.certIntro { display: grid; grid-template-columns: 1.3fr .7fr; align-items: end; gap: 50px; padding: 58px 0; }
+.certIntro { display: grid; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 50px; padding: 58px 0; }
 .certIntro p { max-width: 430px; color: var(--muted); line-height: 1.7; }
 .certificateList { border-top: 1px solid var(--ink); }
 .certificateList a { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); transition: background .15s ease; }
