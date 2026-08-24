@@ -22,12 +22,6 @@ const certificates = [
     issuer: "LinkedIn Learning",
     href: "https://www.linkedin.com/learning/certificates/dc1f9ef1a9904e611667489bd78a276806e4f91191e0567e43561900498d8821/",
   },
-  {
-    date: "MAY 2026",
-    title: "Algorithmic Trading and Stocks Essential Training",
-    issuer: "LinkedIn Learning",
-    href: "https://www.linkedin.com/learning/certificates/1463d593e213d2dc0e8d6d6cb3e36479a8826848c179875b4257655838e040d7/",
-  },
 ];
 
 export default function Home() {
@@ -152,7 +146,7 @@ export default function Home() {
       </section>
 
       <section className="notebookSection" id="certificates">
-        <div className="sectionLabel">04 — CERTIFICATIONS</div>
+        <div className="sectionLabel">04 — CERTIFICATIONS (DATA RELATED)</div>
         <div className="certificateList">
           {certificates.map((cert) => (
             <a key={cert.title} href={cert.href} target="_blank" rel="noreferrer">
