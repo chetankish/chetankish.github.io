@@ -70,9 +70,7 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .moduleRow span { color: var(--blue); font: 550 11px var(--mono); }
 .moduleRow strong { font: 550 15px var(--mono); }
 .moduleRow p { margin: 0; color: var(--muted); font-size: 14px; }
-.certIntro { display: grid; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 50px; padding: 58px 0; }
-.certIntro p { max-width: 430px; color: var(--muted); line-height: 1.7; }
-.certificateList { border-top: 1px solid var(--ink); }
+.certificateList { margin-top: 34px; border-top: 1px solid var(--ink); }
 .certificateList a { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); transition: background .15s ease; }
 .certificateList a:hover { background: var(--blue-paper); }
 .certificateList span { color: var(--muted); font: 500 11px var(--mono); }
@@ -86,7 +84,7 @@ footer a { color: var(--ink); }
   .siteHeader nav { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; }
   .intro { padding-top: 38px; padding-bottom: 40px; }
   .notebookSection { margin-left: 12px; margin-right: 12px; padding: 24px; }
-  .aboutGrid, .projectSummary, .schoolIntro, .certIntro { grid-template-columns: 1fr; gap: 36px; }
+  .aboutGrid, .projectSummary, .schoolIntro { grid-template-columns: 1fr; gap: 36px; }
   .profilePanel { border-left: 0; border-top: 1px solid var(--line); padding: 30px 0 0; }
   .projectNotes { grid-template-columns: 1fr; }
   .projectNotes>div { border-right: 0; border-bottom: 1px solid var(--line); }
