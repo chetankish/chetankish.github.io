@@ -153,10 +153,6 @@ export default function Home() {
 
       <section className="notebookSection" id="certificates">
         <div className="sectionLabel">04 — CERTIFICATIONS</div>
-        <div className="certIntro">
-          <h2>Continuous learning,<br />documented.</h2>
-          <p>Selected certificates related to analytics, tools and quantitative thinking.</p>
-        </div>
         <div className="certificateList">
           {certificates.map((cert) => (
             <a key={cert.title} href={cert.href} target="_blank" rel="noreferrer">
