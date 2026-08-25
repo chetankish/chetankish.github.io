@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
 const modules = [
@@ -25,16 +29,47 @@ const certificates = [
 ];
 
 export default function Home() {
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("portfolio-theme");
+    const initialTheme = savedTheme === "light" ? "light" : "dark";
+    setTheme(initialTheme);
+    document.documentElement.dataset.theme = initialTheme;
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "light" ? "dark" : "light";
+    setTheme(nextTheme);
+    document.documentElement.dataset.theme = nextTheme;
+    window.localStorage.setItem("portfolio-theme", nextTheme);
+  };
+
   return (
     <main id="top">
       <header className="siteHeader">
         <a className="siteName" href="#top">CHETAN KISHNANI / DATA PORTFOLIO</a>
-        <nav aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#school">School</a>
-          <a href="#certificates">Certs</a>
-        </nav>
+        <div className="headerActions">
+          <nav aria-label="Primary navigation">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#school">School</a>
+            <a href="#certificates">Certs</a>
+          </nav>
+          <button
+            className="themeToggle"
+            type="button"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+            aria-pressed={theme === "dark"}
+          >
+            <span className="themeTrack" aria-hidden="true">
+              <span className="themeOption themeSun">☀</span>
+              <span className="themeOption themeMoon">☾</span>
+              <span className="themeKnob">{theme === "dark" ? "☾" : "☀"}</span>
+            </span>
+          </button>
+        </div>
       </header>
 
       <section className="intro" aria-labelledby="intro-title">
