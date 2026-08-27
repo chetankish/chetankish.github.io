@@ -16,6 +16,12 @@ const modules = [
 const certificates = [
   {
     date: "AUG 2026",
+    title: "Introduction to Power BI",
+    issuer: "DataCamp",
+    href: "https://www.datacamp.com/completed/statement-of-accomplishment/course/8a3ca41e4d2474f2aceb5228ac8a87ea637bb56a",
+  },
+  {
+    date: "AUG 2026",
     title: "Learning Data Analytics: 1 Foundations",
     issuer: "LinkedIn Learning",
     href: "https://www.linkedin.com/learning/certificates/11886c699aadeb728a5f2c0becf4c7f6d812b3292591c69924c0d827275efc63/?trk=share_certificate",
