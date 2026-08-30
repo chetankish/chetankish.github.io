@@ -18,18 +18,21 @@ const certificates = [
     date: "AUG 2026",
     title: "Joining Data in SQL",
     issuer: "DataCamp",
+    track: "Part of the Associate Data Analyst in SQL Career Track",
     href: "https://www.datacamp.com/statement-of-accomplishment/course/febd33049b60ebb353c2204a6a31392b3c5da17e?raw=1",
   },
   {
     date: "AUG 2026",
     title: "Intermediate SQL",
     issuer: "DataCamp",
+    track: "Part of the Associate Data Analyst in SQL Career Track",
     href: "https://www.datacamp.com/statement-of-accomplishment/course/102395fc951b4beb3038f940a1ede75e0e2b6127?raw=1",
   },
   {
     date: "AUG 2026",
     title: "Introduction to SQL",
     issuer: "DataCamp",
+    track: "Part of the Associate Data Analyst in SQL Career Track",
     href: "https://www.datacamp.com/statement-of-accomplishment/course/3daa063d033eaf131c8c7ecfaa3e1693ba4b95a7?raw=1",
   },
   {
@@ -210,7 +213,10 @@ export default function Home() {
           {certificates.map((cert) => (
             <a key={cert.title} href={cert.href} target="_blank" rel="noreferrer">
               <span>{cert.date}</span>
-              <strong>{cert.title}</strong>
+              <span className="certificateTitle">
+                <strong>{cert.title}</strong>
+                {cert.track && <small>{cert.track}</small>}
+              </span>
               <span>{cert.issuer}</span>
               <Arrow />
             </a>
