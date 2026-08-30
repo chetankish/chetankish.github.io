@@ -16,6 +16,24 @@ const modules = [
 const certificates = [
   {
     date: "AUG 2026",
+    title: "Joining Data in SQL",
+    issuer: "DataCamp",
+    href: "https://www.datacamp.com/statement-of-accomplishment/course/febd33049b60ebb353c2204a6a31392b3c5da17e?raw=1",
+  },
+  {
+    date: "AUG 2026",
+    title: "Intermediate SQL",
+    issuer: "DataCamp",
+    href: "https://www.datacamp.com/statement-of-accomplishment/course/102395fc951b4beb3038f940a1ede75e0e2b6127?raw=1",
+  },
+  {
+    date: "AUG 2026",
+    title: "Introduction to SQL",
+    issuer: "DataCamp",
+    href: "https://www.datacamp.com/statement-of-accomplishment/course/3daa063d033eaf131c8c7ecfaa3e1693ba4b95a7?raw=1",
+  },
+  {
+    date: "AUG 2026",
     title: "Introduction to Power BI",
     issuer: "DataCamp",
     href: "https://www.datacamp.com/completed/statement-of-accomplishment/course/8a3ca41e4d2474f2aceb5228ac8a87ea637bb56a",
