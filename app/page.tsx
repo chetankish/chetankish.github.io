@@ -15,6 +15,13 @@ const modules = [
 
 const certificates = [
   {
+    date: "SEP 2026",
+    title: "Data Manipulation in SQL",
+    issuer: "DataCamp",
+    track: "Part of the Associate Data Analyst in SQL Career Track",
+    href: "https://www.datacamp.com/statement-of-accomplishment/course/42183ccfbc2238f158428d491fc7293e0089c94c?raw=1",
+  },
+  {
     date: "AUG 2026",
     title: "Joining Data in SQL",
     issuer: "DataCamp",
