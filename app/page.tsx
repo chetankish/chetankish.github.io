@@ -17,6 +17,14 @@ const certificates = [
   {
     type: "COURSE",
     date: "SEP 2026",
+    title: "PostgreSQL Summary Stats and Window Functions",
+    issuer: "DataCamp",
+    track: "Part of the Associate Data Analyst in SQL Career Track",
+    href: "https://www.datacamp.com/statement-of-accomplishment/course/ba9411e3d6414a408b7169734b4ec9c3d2219853?raw=1",
+  },
+  {
+    type: "COURSE",
+    date: "SEP 2026",
     title: "Data Manipulation in SQL",
     issuer: "DataCamp",
     track: "Part of the Associate Data Analyst in SQL Career Track",
