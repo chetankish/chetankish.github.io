@@ -131,7 +131,7 @@ export default function Home() {
           <div className="aboutCopy">
             <h2>Hello, I&apos;m Chetan.</h2>
             <p>
-              I&apos;m an undergraduate at Singapore Management University studying Economics and Data Science &amp; Analytics, with an expected graduation in April 2028.
+              I&apos;m an undergraduate at Singapore Management University pursuing a BSc (Economics) with a 2nd Major in Data Science &amp; Analytics, with an expected graduation in April 2028.
             </p>
             <p>
               My experience in finance and operations showed me how much I enjoy analysing data, uncovering patterns and drawing meaningful conclusions from it. I&apos;m now building on that foundation through statistics, econometrics and hands-on analytics projects as I work towards becoming a data analyst who can turn complex datasets into clear, practical insights.
@@ -211,10 +211,11 @@ export default function Home() {
           <div>
             <p className="miniLabel">SINGAPORE MANAGEMENT UNIVERSITY</p>
             <h2>BSc (Economics)</h2>
+            <p className="secondMajor">2nd Major in Data Science &amp; Analytics</p>
           </div>
-          <div>
-            <p>Economics and Data Science &amp; Analytics</p>
-            <p>Expected graduation / April 2028</p>
+          <div className="graduationBlock">
+            <p className="graduationLabel">EXPECTED GRADUATION</p>
+            <p className="graduationDate">April 2028</p>
           </div>
         </div>
         <p className="tableTitle">SELECTED DATA-RELATED MODULES</p>

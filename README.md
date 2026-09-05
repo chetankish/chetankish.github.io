@@ -6,7 +6,7 @@ My personal data analytics portfolio, featuring selected projects, university co
 
 ## About
 
-I am an undergraduate at Singapore Management University studying Economics and Data Science & Analytics, with an expected graduation in April 2028.
+I am an undergraduate at Singapore Management University pursuing a BSc (Economics) with a 2nd Major in Data Science & Analytics, with an expected graduation in April 2028.
 
 My experience in finance and operations showed me how much I enjoy analysing data, uncovering patterns and drawing meaningful conclusions. I am building on that foundation through statistics, econometrics and hands-on analytics projects as I work towards becoming a data analyst.
 
