@@ -112,6 +112,8 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .certificateList strong { font: 550 15px var(--mono); }
 .certificateList .certificateTitle { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; color: var(--ink); }
 .certificateList .certificateTitle small { color: var(--muted); font: 500 10px var(--mono); letter-spacing: .02em; }
+.certificateList .certificateIssuer { display: flex; align-items: center; gap: 10px; }
+.certificateList .certificateIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 9px var(--mono); letter-spacing: .08em; }
 .certificateList a>span:last-child { color: var(--blue); font-size: 17px; }
 footer { max-width: 1280px; margin: 60px auto 0; padding: 36px 34px 52px; border-top: 1px solid var(--ink); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; color: var(--muted); font: 500 11px var(--mono); }
 footer a { color: var(--ink); }
@@ -133,6 +135,6 @@ footer a { color: var(--ink); }
   .moduleRow { grid-template-columns: 1fr; gap: 8px; }
   .certificateList a { grid-template-columns: 1fr auto; padding: 22px 0; }
   .certificateList .certificateTitle { grid-column: 1 / -1; }
-  .certificateList a>span:nth-of-type(2) { display: none; }
+  .certificateList .certificateIssuer { display: none; }
   footer { grid-template-columns: 1fr; margin-top: 36px; }
 }

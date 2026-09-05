@@ -15,6 +15,7 @@ const modules = [
 
 const certificates = [
   {
+    type: "COURSE",
     date: "SEP 2026",
     title: "Data Manipulation in SQL",
     issuer: "DataCamp",
@@ -22,6 +23,7 @@ const certificates = [
     href: "https://www.datacamp.com/statement-of-accomplishment/course/42183ccfbc2238f158428d491fc7293e0089c94c?raw=1",
   },
   {
+    type: "COURSE",
     date: "AUG 2026",
     title: "Joining Data in SQL",
     issuer: "DataCamp",
@@ -29,6 +31,7 @@ const certificates = [
     href: "https://www.datacamp.com/statement-of-accomplishment/course/febd33049b60ebb353c2204a6a31392b3c5da17e?raw=1",
   },
   {
+    type: "COURSE",
     date: "AUG 2026",
     title: "Intermediate SQL",
     issuer: "DataCamp",
@@ -36,6 +39,7 @@ const certificates = [
     href: "https://www.datacamp.com/statement-of-accomplishment/course/102395fc951b4beb3038f940a1ede75e0e2b6127?raw=1",
   },
   {
+    type: "COURSE",
     date: "AUG 2026",
     title: "Introduction to SQL",
     issuer: "DataCamp",
@@ -43,18 +47,21 @@ const certificates = [
     href: "https://www.datacamp.com/statement-of-accomplishment/course/3daa063d033eaf131c8c7ecfaa3e1693ba4b95a7?raw=1",
   },
   {
+    type: "COURSE",
     date: "AUG 2026",
     title: "Introduction to Power BI",
     issuer: "DataCamp",
     href: "https://www.datacamp.com/completed/statement-of-accomplishment/course/8a3ca41e4d2474f2aceb5228ac8a87ea637bb56a",
   },
   {
+    type: "COURSE",
     date: "AUG 2026",
     title: "Learning Data Analytics: 1 Foundations",
     issuer: "LinkedIn Learning",
     href: "https://www.linkedin.com/learning/certificates/11886c699aadeb728a5f2c0becf4c7f6d812b3292591c69924c0d827275efc63/?trk=share_certificate",
   },
   {
+    type: "COURSE",
     date: "MAY 2026",
     title: "Excel and ChatGPT: Data Analysis Power Tips",
     issuer: "LinkedIn Learning",
@@ -215,7 +222,7 @@ export default function Home() {
       </section>
 
       <section className="notebookSection" id="certificates">
-        <div className="sectionLabel">04 — CERTIFICATIONS (DATA RELATED)</div>
+        <div className="sectionLabel">04 — COURSES &amp; CERTIFICATIONS</div>
         <div className="certificateList">
           {certificates.map((cert) => (
             <a key={cert.title} href={cert.href} target="_blank" rel="noreferrer">
@@ -224,7 +231,10 @@ export default function Home() {
                 <strong>{cert.title}</strong>
                 {cert.track && <small>{cert.track}</small>}
               </span>
-              <span>{cert.issuer}</span>
+              <span className="certificateIssuer">
+                <small>{cert.type}</small>
+                <span>{cert.issuer}</span>
+              </span>
               <Arrow />
             </a>
           ))}

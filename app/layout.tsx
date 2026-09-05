@@ -15,7 +15,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Chetan Kishnani — Data Portfolio",
-  description: "Data projects, SMU analytics modules and certifications by Chetan Kishnani.",
+  description: "Data projects, SMU analytics modules, courses and certifications by Chetan Kishnani.",
   openGraph: {
     title: "Chetan Kishnani — Data Portfolio",
     description: "Projects · SMU Modules · Certifications",

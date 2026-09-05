@@ -1,6 +1,6 @@
 # Chetan Kishnani — Data Portfolio
 
-My personal data analytics portfolio, featuring selected projects, university coursework and data-related certifications.
+My personal data analytics portfolio, featuring selected projects, university coursework, completed courses and certifications.
 
 **Live website:** [chetankish.github.io](https://chetankish.github.io/)
 
@@ -15,7 +15,7 @@ My experience in finance and operations showed me how much I enjoy analysing dat
 - **About:** Background, skills and profile links
 - **Projects:** Selected data analytics work
 - **School:** Data-related SMU modules
-- **Certifications:** Relevant technical and analytics certifications
+- **Courses & Certifications:** Relevant technical and analytics learning credentials
 
 ## Featured Project
 
