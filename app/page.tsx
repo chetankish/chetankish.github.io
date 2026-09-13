@@ -17,6 +17,14 @@ const certificates = [
   {
     type: "COURSE",
     date: "SEP 2026",
+    title: "Exploratory Data Analysis in SQL",
+    issuer: "DataCamp",
+    track: "Part of the Associate Data Analyst in SQL Career Track",
+    href: "https://www.datacamp.com/statement-of-accomplishment/course/10503538beb202b6ccb1d4eda65a87804134eb0a?raw=1",
+  },
+  {
+    type: "COURSE",
+    date: "SEP 2026",
     title: "Functions for Manipulating Data in PostgreSQL",
     issuer: "DataCamp",
     track: "Part of the Associate Data Analyst in SQL Career Track",
