@@ -13,63 +13,43 @@ const modules = [
   ["STATISTICS", "Introduction to Statistical Theory", "Statistical Foundations"],
 ];
 
-const certificates = [
+const sqlTrackCourses = [
   {
-    type: "COURSE",
-    date: "SEP 2026",
-    title: "Exploratory Data Analysis in SQL",
-    issuer: "DataCamp",
-    track: "Part of the Associate Data Analyst in SQL Career Track",
-    href: "https://www.datacamp.com/statement-of-accomplishment/course/10503538beb202b6ccb1d4eda65a87804134eb0a?raw=1",
-  },
-  {
-    type: "COURSE",
-    date: "SEP 2026",
-    title: "Functions for Manipulating Data in PostgreSQL",
-    issuer: "DataCamp",
-    track: "Part of the Associate Data Analyst in SQL Career Track",
-    href: "https://www.datacamp.com/statement-of-accomplishment/course/3a464a79593f75b69ef020d460c5c57d0dd9d2da?raw=1",
-  },
-  {
-    type: "COURSE",
-    date: "SEP 2026",
-    title: "PostgreSQL Summary Stats and Window Functions",
-    issuer: "DataCamp",
-    track: "Part of the Associate Data Analyst in SQL Career Track",
-    href: "https://www.datacamp.com/statement-of-accomplishment/course/ba9411e3d6414a408b7169734b4ec9c3d2219853?raw=1",
-  },
-  {
-    type: "COURSE",
-    date: "SEP 2026",
-    title: "Data Manipulation in SQL",
-    issuer: "DataCamp",
-    track: "Part of the Associate Data Analyst in SQL Career Track",
-    href: "https://www.datacamp.com/statement-of-accomplishment/course/42183ccfbc2238f158428d491fc7293e0089c94c?raw=1",
-  },
-  {
-    type: "COURSE",
-    date: "AUG 2026",
-    title: "Joining Data in SQL",
-    issuer: "DataCamp",
-    track: "Part of the Associate Data Analyst in SQL Career Track",
-    href: "https://www.datacamp.com/statement-of-accomplishment/course/febd33049b60ebb353c2204a6a31392b3c5da17e?raw=1",
-  },
-  {
-    type: "COURSE",
-    date: "AUG 2026",
-    title: "Intermediate SQL",
-    issuer: "DataCamp",
-    track: "Part of the Associate Data Analyst in SQL Career Track",
-    href: "https://www.datacamp.com/statement-of-accomplishment/course/102395fc951b4beb3038f940a1ede75e0e2b6127?raw=1",
-  },
-  {
-    type: "COURSE",
-    date: "AUG 2026",
     title: "Introduction to SQL",
-    issuer: "DataCamp",
-    track: "Part of the Associate Data Analyst in SQL Career Track",
-    href: "https://www.datacamp.com/statement-of-accomplishment/course/3daa063d033eaf131c8c7ecfaa3e1693ba4b95a7?raw=1",
   },
+  {
+    title: "Intermediate SQL",
+  },
+  {
+    title: "Joining Data in SQL",
+  },
+  {
+    title: "Data Manipulation in SQL",
+  },
+  {
+    title: "PostgreSQL Summary Stats and Window Functions",
+  },
+  {
+    title: "Functions for Manipulating Data in PostgreSQL",
+  },
+  {
+    title: "Introduction to Statistics",
+  },
+  {
+    title: "Exploratory Data Analysis in SQL",
+  },
+  {
+    title: "Data-Driven Decision Making in SQL",
+  },
+  {
+    title: "Understanding Data Visualization",
+  },
+  {
+    title: "Data Communication Concepts",
+  },
+];
+
+const certificates = [
   {
     type: "COURSE",
     date: "AUG 2026",
@@ -95,6 +75,7 @@ const certificates = [
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [trackOpen, setTrackOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("portfolio-theme");
@@ -248,6 +229,44 @@ export default function Home() {
 
       <section className="notebookSection" id="certificates">
         <div className="sectionLabel">04 — COURSES &amp; CERTIFICATIONS</div>
+        <details
+          className="careerTrack"
+          open={trackOpen}
+          onToggle={(event) => setTrackOpen(event.currentTarget.open)}
+        >
+          <summary>
+            <span className="trackDate">SEP 2026</span>
+            <span className="trackHeading">
+              <strong>Associate Data Analyst in SQL</strong>
+              <small>Completed 11-course career track</small>
+            </span>
+            <span className="trackIssuer">
+              <small>CAREER TRACK</small>
+              <span>DataCamp</span>
+            </span>
+            <span className="trackToggle" aria-hidden="true">{trackOpen ? "⌃" : "⌄"}</span>
+          </summary>
+          <div className="trackBody">
+            <div className="trackActions">
+              <a
+                className="trackCertificate"
+                href="https://www.datacamp.com/statement-of-accomplishment/track/573ead8928aa8acab876fdd12e21bfca48a3fafc?raw=1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                VIEW TRACK CERTIFICATE <Arrow />
+              </a>
+            </div>
+            <ol className="trackCourses">
+              {sqlTrackCourses.map((course, index) => (
+                <li key={course.title}>
+                  <span className="courseNumber">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="courseName">{course.title}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </details>
         <div className="certificateList">
           {certificates.map((cert) => (
             <a key={cert.title} href={cert.href} target="_blank" rel="noreferrer">
