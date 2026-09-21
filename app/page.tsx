@@ -75,7 +75,7 @@ const certificates = [
 
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
-  const [trackOpen, setTrackOpen] = useState(false);
+  const [certificationOpen, setCertificationOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem("portfolio-theme");
@@ -230,38 +230,60 @@ export default function Home() {
       <section className="notebookSection" id="certificates">
         <div className="sectionLabel">04 — COURSES &amp; CERTIFICATIONS</div>
         <details
-          className="careerTrack"
-          open={trackOpen}
-          onToggle={(event) => setTrackOpen(event.currentTarget.open)}
+          className="professionalCertification"
+          open={certificationOpen}
+          onToggle={(event) => setCertificationOpen(event.currentTarget.open)}
         >
-          <summary>
-            <span className="trackDate">SEP 2026</span>
-            <span className="trackHeading">
-              <strong>Associate Data Analyst in SQL</strong>
-              <small>Completed 11-course career track</small>
-            </span>
-            <span className="trackIssuer">
-              <small>CAREER TRACK</small>
-              <span>DataCamp</span>
-            </span>
-            <span className="trackToggle" aria-hidden="true">{trackOpen ? "⌃" : "⌄"}</span>
+          <summary className="certificationGroupTitle">
+            <span aria-hidden="true" />
+            <strong>Associate Data Analyst in SQL Certification</strong>
+            <span aria-hidden="true" />
+            <span className="trackToggle" aria-hidden="true">{certificationOpen ? "⌃" : "⌄"}</span>
           </summary>
-          <div className="trackBody">
-            <div className="trackActions">
-              <a
-                className="trackCertificate"
-                href="https://www.datacamp.com/statement-of-accomplishment/track/573ead8928aa8acab876fdd12e21bfca48a3fafc?raw=1"
-                target="_blank"
-                rel="noreferrer"
-              >
-                VIEW TRACK CERTIFICATE <Arrow />
-              </a>
-            </div>
+          <div className="certificationBody">
+            <a
+              className="professionalCertificateRow"
+              href="/data-analyst-associate-certificate.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="trackDate">SEP 2026</span>
+              <span className="trackHeading">
+                <strong>Data Analyst Associate</strong>
+                <small>Data management, data validation, exploratory analysis, statistical analysis and data-driven decision-making.</small>
+              </span>
+              <span className="trackIssuer">
+                <small>CERTIFICATION</small>
+                <span>DataCamp</span>
+              </span>
+              <Arrow />
+            </a>
+            <a
+              className="careerTrackRow"
+              href="https://www.datacamp.com/statement-of-accomplishment/track/573ead8928aa8acab876fdd12e21bfca48a3fafc?raw=1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="trackDate">SEP 2026</span>
+              <span className="trackHeading">
+                <strong>Associate Data Analyst in SQL</strong>
+                <small>Completed 11-course career track</small>
+              </span>
+              <span className="trackIssuer">
+                <small>CAREER TRACK</small>
+                <span>DataCamp</span>
+              </span>
+              <Arrow />
+            </a>
             <ol className="trackCourses">
               {sqlTrackCourses.map((course, index) => (
                 <li key={course.title}>
                   <span className="courseNumber">{String(index + 1).padStart(2, "0")}</span>
                   <span className="courseName">{course.title}</span>
+                  <span className="courseIssuer">
+                    <small>COURSE</small>
+                    <span>DataCamp</span>
+                  </span>
                 </li>
               ))}
             </ol>

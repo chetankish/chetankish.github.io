@@ -110,33 +110,40 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .moduleRow strong { font: 550 15px var(--mono); }
 .moduleRow p { margin: 0; color: var(--muted); font-size: 14px; }
 .certificateList { margin-top: 0; border-top: 0; }
-.careerTrack { margin-top: 34px; border: 0; }
-.careerTrack summary { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); cursor: pointer; list-style: none; transition: background .15s ease; }
-.careerTrack summary::-webkit-details-marker { display: none; }
-.careerTrack summary:hover { background: var(--blue-paper); }
-.trackDate { color: var(--muted); font: 500 11px var(--mono); }
+.professionalCertification { margin-top: 34px; border: 0; }
+.professionalCertification summary { cursor: pointer; list-style: none; transition: background .15s ease; }
+.professionalCertification summary::-webkit-details-marker { display: none; }
+.professionalCertification summary:hover { background: var(--blue-paper); }
+.certificationGroupTitle { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; padding: 0; border: 0; border-bottom: 1px solid var(--line); font: 550 15px/1.4 var(--mono); letter-spacing: 0; }
+.trackDate { color: var(--muted); font: 500 13px var(--mono); }
 .trackHeading { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; color: var(--ink); }
 .trackHeading strong { font: 550 15px var(--mono); }
-.trackHeading small { color: var(--muted); font: 500 10px var(--mono); letter-spacing: .02em; }
-.trackIssuer { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 500 11px var(--mono); }
-.trackIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 9px var(--mono); letter-spacing: .08em; }
+.trackHeading small { color: var(--muted); font: 500 13px var(--mono); letter-spacing: .02em; }
+.trackIssuer { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 500 13px var(--mono); }
+.trackIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 13px var(--mono); letter-spacing: .08em; }
 .trackToggle { color: var(--blue); font: 600 17px var(--mono); }
-.trackBody { border-top: 1px solid var(--line); padding: 28px 0 8px; }
+.certificationBody { padding: 18px 0 8px; }
+.professionalCertificateRow, .careerTrackRow { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); transition: background .15s ease; }
+.professionalCertificateRow:hover, .careerTrackRow:hover { background: var(--blue-paper); }
+.professionalCertificateRow>span:last-child, .careerTrackRow>span:last-child { color: var(--blue); font-size: 17px; }
+.careerTrackRow { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .15s ease; }
 .trackActions { margin-bottom: 22px; }
-.trackCertificate { padding-bottom: 5px; border-bottom: 2px solid var(--ink); font: 650 11px var(--mono); white-space: nowrap; }
+.trackCertificate { padding-bottom: 5px; border-bottom: 2px solid var(--ink); font: 650 13px var(--mono); white-space: nowrap; }
 .trackCourses { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.trackCourses li { min-height: 68px; display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 20px; border-bottom: 1px solid var(--line); }
+.trackCourses li { min-height: 68px; display: grid; grid-template-columns: .6fr 2fr .8fr 17px; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); }
 .trackCourses li:last-child { border-bottom: 0; }
-.courseNumber { color: var(--muted); font: 500 9px var(--mono); }
+.courseNumber { color: var(--muted); font: 500 13px var(--mono); }
 .courseName { font: 550 13px/1.4 var(--mono); }
+.courseIssuer { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 500 13px var(--mono); }
+.courseIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 13px var(--mono); letter-spacing: .08em; }
 .certificateList a { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); transition: background .15s ease; }
 .certificateList a:hover { background: var(--blue-paper); }
-.certificateList span { color: var(--muted); font: 500 11px var(--mono); }
+.certificateList span { color: var(--muted); font: 500 13px var(--mono); }
 .certificateList strong { font: 550 15px var(--mono); }
 .certificateList .certificateTitle { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; color: var(--ink); }
-.certificateList .certificateTitle small { color: var(--muted); font: 500 10px var(--mono); letter-spacing: .02em; }
+.certificateList .certificateTitle small { color: var(--muted); font: 500 13px var(--mono); letter-spacing: .02em; }
 .certificateList .certificateIssuer { display: flex; align-items: center; gap: 10px; }
-.certificateList .certificateIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 9px var(--mono); letter-spacing: .08em; }
+.certificateList .certificateIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 13px var(--mono); letter-spacing: .08em; }
 .certificateList a>span:last-child { color: var(--blue); font-size: 17px; }
 footer { max-width: 1280px; margin: 60px auto 0; padding: 36px 34px 52px; border-top: 1px solid var(--ink); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; color: var(--muted); font: 500 11px var(--mono); }
 footer a { color: var(--ink); }
@@ -156,10 +163,15 @@ footer a { color: var(--ink); }
   .projectNotes>div { border-right: 0; border-bottom: 1px solid var(--line); }
   .projectNotes>div:last-child { border-bottom: 0; }
   .moduleRow { grid-template-columns: 1fr; gap: 8px; }
-  .careerTrack summary { grid-template-columns: 1fr auto; gap: 14px; }
+  .certificationGroupTitle { min-height: 84px; grid-template-columns: 1fr auto; gap: 14px; padding: 0; font-size: 15px; }
+  .certificationGroupTitle>span:first-child, .certificationGroupTitle>span:nth-child(3) { display: none; }
+  .professionalCertificateRow, .careerTrackRow { grid-template-columns: 1fr auto; gap: 14px; padding: 22px 0; }
+  .professionalCertificateRow .trackHeading, .careerTrackRow .trackHeading { grid-column: 1 / -1; }
+  .professionalCertificateRow .trackIssuer, .careerTrackRow .trackIssuer { display: none; }
   .trackHeading { grid-column: 1 / -1; }
   .trackIssuer { display: none; }
-  .trackCourses li { grid-template-columns: 34px 1fr; gap: 10px; padding: 16px 0; }
+  .trackCourses li { grid-template-columns: 34px 1fr auto; gap: 10px; padding: 16px 0; }
+  .courseIssuer span { display: none; }
   .certificateList a { grid-template-columns: 1fr auto; padding: 22px 0; }
   .certificateList .certificateTitle { grid-column: 1 / -1; }
   .certificateList .certificateIssuer { display: none; }
