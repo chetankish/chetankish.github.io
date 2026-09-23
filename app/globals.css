@@ -37,6 +37,7 @@
 }
 
 * { box-sizing: border-box; }
+main { display: flex; flex-direction: column; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--mono); transition: background-color .2s ease, color .2s ease; }
 a { color: inherit; text-decoration: none; }
@@ -65,8 +66,15 @@ h1 { max-width: 970px; margin: 0; font: 600 clamp(52px, 8vw, 112px)/.98 var(--mo
 .introText { max-width: 720px; margin: 30px 0 20px; color: var(--muted); font-size: clamp(16px, 1.7vw, 20px); line-height: 1.65; }
 .textLink { font: 600 13px var(--mono); border-bottom: 1px solid var(--ink); padding-bottom: 4px; }
 .notebookSection { max-width: 1280px; margin: 0 auto 18px; padding: 34px; border: 1px solid var(--line); background: var(--panel); }
+.siteHeader { order: 1; width: 100%; }
+.intro { order: 2; width: 100%; }
+#about { order: 3; width: calc(100% - 24px); }
+#certificates { order: 4; width: calc(100% - 24px); }
+#projects { order: 5; width: calc(100% - 24px); }
+#school { order: 6; width: calc(100% - 24px); }
+footer { order: 7; width: 100%; }
 .about, .school { background: var(--blue-paper); }
-.sectionLabel { padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--blue); font-size: 17px; font-weight: 650; }
+.sectionLabel { padding-bottom: 18px; border-bottom: 1px solid var(--line); color: var(--blue); font-size: clamp(23px, 2.2vw, 27px); font-weight: 650; }
 h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacing: -.045em; }
 .aboutGrid { display: grid; grid-template-columns: 1.5fr .8fr; gap: 80px; padding: 64px 0 24px; }
 .aboutCopy p { max-width: 720px; color: var(--copy); line-height: 1.75; font-size: 17px; }
@@ -77,6 +85,20 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .profilePanel a { display: block; width: fit-content; margin-top: 10px; font: 600 14px var(--mono); border-bottom: 1px solid transparent; }
 .profilePanel a:hover { border-color: var(--ink); }
 .profilePanel p:last-child { line-height: 1.65; }
+.profilePanel .findMePanel { padding: 24px; border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 70%, transparent); }
+.findMePanel .miniLabel { margin-top: 0; }
+.findMeIntro { margin: 8px 0 20px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.socialLinks { display: grid; gap: 10px; }
+.profilePanel .socialCard { width: 100%; margin: 0; padding: 14px; display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 12px; border: 1px solid var(--line); background: var(--panel); transition: border-color .15s ease, transform .15s ease, background-color .15s ease; }
+.profilePanel .socialCard:hover { border-color: var(--blue); background: var(--blue-paper); transform: translateX(3px); }
+.socialIcon { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 4px; color: #fff; box-shadow: 0 0 0 1px rgb(255 255 255 / .1); }
+.socialCardLinkedIn .socialIcon { background: #0a66c2; }
+.socialCardGitHub .socialIcon { background: #181717; }
+.socialIcon svg { width: 20px; height: 20px; fill: currentColor; }
+.socialCard>span:nth-child(2) { display: flex; flex-direction: column; gap: 3px; }
+.socialCard strong { font-size: 14px; }
+.socialCard small { color: var(--muted); font: 500 13px var(--mono); }
+.socialCard>span:last-child { color: var(--blue); font-size: 17px; }
 .projectHeader { display: grid; grid-template-columns: 1fr auto; gap: 30px; padding: 62px 0 34px; }
 .projectHeader .miniLabel { font-size: 17px; }
 .projectHeader h2 { max-width: 920px; }
@@ -109,12 +131,18 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .moduleRow span { color: var(--blue); font: 550 13px var(--mono); }
 .moduleRow strong { font: 550 15px var(--mono); }
 .moduleRow p { margin: 0; color: var(--muted); font-size: 14px; }
-.certificateList { margin-top: 0; border-top: 0; }
+.certificateList { margin-top: 14px; display: grid; gap: 14px; }
 .professionalCertification { margin-top: 34px; border: 0; }
 .professionalCertification summary { cursor: pointer; list-style: none; transition: background .15s ease; }
 .professionalCertification summary::-webkit-details-marker { display: none; }
 .professionalCertification summary:hover { background: var(--blue-paper); }
-.certificationGroupTitle { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; padding: 0; border: 0; border-bottom: 1px solid var(--line); font: 550 15px/1.4 var(--mono); letter-spacing: 0; }
+.certificationGroupTitle { min-height: 112px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--blue); background: color-mix(in srgb, var(--blue-paper) 45%, var(--panel)); font: 550 15px/1.4 var(--mono); letter-spacing: 0; }
+.certificationSummaryCopy { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.certificationSummaryCopy small { color: var(--blue); font: 650 13px var(--mono); letter-spacing: .08em; }
+.certificationSummaryCopy strong { font: 600 18px/1.35 var(--mono); }
+.certificationSummaryCopy>span { color: var(--muted); font: 500 13px var(--mono); }
+.certificationToggle { display: flex; align-items: center; gap: 12px; color: var(--blue); font: 650 13px var(--mono); letter-spacing: .06em; }
+.certificationToggle>span { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--blue); font-size: 20px; line-height: 1; }
 .trackDate { color: var(--muted); font: 500 13px var(--mono); }
 .trackHeading { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; color: var(--ink); }
 .trackHeading strong { font: 550 15px var(--mono); }
@@ -122,29 +150,41 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .trackIssuer { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 500 13px var(--mono); }
 .trackIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 13px var(--mono); letter-spacing: .08em; }
 .trackToggle { color: var(--blue); font: 600 17px var(--mono); }
-.certificationBody { padding: 18px 0 8px; }
+.certificationBody { position: relative; margin-left: 28px; padding: 22px 0 8px 28px; border-left: 1px solid var(--blue); }
+.certificationBody::before { content: ""; position: absolute; top: 0; left: -1px; width: 22px; border-top: 1px solid var(--blue); }
+.credentialGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.credentialCard { min-height: 230px; margin: 0; padding: 24px; display: flex; flex-direction: column; border: 1px solid var(--line); background: var(--panel); transition: border-color .15s ease, transform .15s ease; }
+.credentialCard:hover { border-color: var(--blue); transform: translateY(-2px); }
+.credentialCardPrimary { background: var(--blue-paper); }
+.credentialMeta { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--muted); font: 500 13px var(--mono); }
+.credentialMeta small { padding: 5px 8px; border: 1px solid var(--line); color: var(--blue); font: 650 13px var(--mono); letter-spacing: .06em; }
+.credentialCard strong { margin-top: 24px; font: 600 17px/1.35 var(--mono); }
+.credentialCard p { margin: 10px 0 24px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.credentialAction { margin-top: auto; color: var(--blue); font: 650 13px var(--mono); }
+.courseworkHeader { margin-top: 26px; padding: 0 0 12px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink); color: var(--orange); font: 650 13px var(--mono); letter-spacing: .06em; }
 .professionalCertificateRow, .careerTrackRow { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); transition: background .15s ease; }
 .professionalCertificateRow:hover, .careerTrackRow:hover { background: var(--blue-paper); }
 .professionalCertificateRow>span:last-child, .careerTrackRow>span:last-child { color: var(--blue); font-size: 17px; }
 .careerTrackRow { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .15s ease; }
 .trackActions { margin-bottom: 22px; }
 .trackCertificate { padding-bottom: 5px; border-bottom: 2px solid var(--ink); font: 650 13px var(--mono); white-space: nowrap; }
-.trackCourses { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.trackCourses li { min-height: 68px; display: grid; grid-template-columns: .6fr 2fr .8fr 17px; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); }
+.trackCourses { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; list-style: none; }
+.trackCourses li { min-height: 62px; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 14px; border-bottom: 1px solid var(--line); }
+.trackCourses li:nth-child(odd) { padding-right: 22px; border-right: 1px solid var(--line); }
+.trackCourses li:nth-child(even) { padding-left: 22px; }
 .trackCourses li:last-child { border-bottom: 0; }
 .courseNumber { color: var(--muted); font: 500 13px var(--mono); }
 .courseName { font: 550 13px/1.4 var(--mono); }
 .courseIssuer { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 500 13px var(--mono); }
 .courseIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 13px var(--mono); letter-spacing: .08em; }
-.certificateList a { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); transition: background .15s ease; }
-.certificateList a:hover { background: var(--blue-paper); }
-.certificateList span { color: var(--muted); font: 500 13px var(--mono); }
-.certificateList strong { font: 550 15px var(--mono); }
-.certificateList .certificateTitle { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; color: var(--ink); }
-.certificateList .certificateTitle small { color: var(--muted); font: 500 13px var(--mono); letter-spacing: .02em; }
-.certificateList .certificateIssuer { display: flex; align-items: center; gap: 10px; }
-.certificateList .certificateIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 13px var(--mono); letter-spacing: .08em; }
-.certificateList a>span:last-child { color: var(--blue); font-size: 17px; }
+.certificateList a { min-height: 112px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--blue); background: color-mix(in srgb, var(--blue-paper) 22%, var(--panel)); transition: border-color .15s ease, background-color .15s ease, transform .15s ease; }
+.certificateList a:hover { border-color: var(--blue); background: var(--blue-paper); transform: translateX(3px); }
+.certificateList .certificateTitle { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; color: var(--ink); }
+.certificateList .certificateTitle small { color: var(--blue); font: 650 13px var(--mono); letter-spacing: .08em; }
+.certificateList .certificateTitle strong { font: 600 18px/1.35 var(--mono); }
+.certificateList .certificateTitle>span { color: var(--muted); font: 500 13px var(--mono); letter-spacing: .02em; }
+.certificateAction { display: flex; align-items: center; gap: 12px; color: var(--blue); font: 650 13px var(--mono); letter-spacing: .06em; }
+.certificateAction>span { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid var(--blue); font-size: 17px; line-height: 1; }
 footer { max-width: 1280px; margin: 60px auto 0; padding: 36px 34px 52px; border-top: 1px solid var(--ink); display: grid; grid-template-columns: 1fr 1fr auto; gap: 30px; color: var(--muted); font: 500 13px var(--mono); }
 footer a { color: var(--ink); }
 
@@ -163,17 +203,23 @@ footer a { color: var(--ink); }
   .projectNotes>div { border-right: 0; border-bottom: 1px solid var(--line); }
   .projectNotes>div:last-child { border-bottom: 0; }
   .moduleRow { grid-template-columns: 1fr; gap: 8px; }
-  .certificationGroupTitle { min-height: 84px; grid-template-columns: 1fr auto; gap: 14px; padding: 0; font-size: 15px; }
-  .certificationGroupTitle>span:first-child, .certificationGroupTitle>span:nth-child(3) { display: none; }
+  .certificationGroupTitle { min-height: 100px; grid-template-columns: 1fr auto; gap: 14px; padding: 18px; font-size: 15px; }
+  .certificationBody { margin-left: 12px; padding-left: 16px; }
+  .certificationSummaryCopy strong { font-size: 15px; }
+  .certificationSummaryCopy>span { display: none; }
+  .certificationToggle { font-size: 0; gap: 0; }
+  .credentialGrid { grid-template-columns: 1fr; }
+  .credentialCard { min-height: 210px; }
   .professionalCertificateRow, .careerTrackRow { grid-template-columns: 1fr auto; gap: 14px; padding: 22px 0; }
   .professionalCertificateRow .trackHeading, .careerTrackRow .trackHeading { grid-column: 1 / -1; }
   .professionalCertificateRow .trackIssuer, .careerTrackRow .trackIssuer { display: none; }
   .trackHeading { grid-column: 1 / -1; }
   .trackIssuer { display: none; }
-  .trackCourses li { grid-template-columns: 34px 1fr auto; gap: 10px; padding: 16px 0; }
-  .courseIssuer span { display: none; }
-  .certificateList a { grid-template-columns: 1fr auto; padding: 22px 0; }
-  .certificateList .certificateTitle { grid-column: 1 / -1; }
-  .certificateList .certificateIssuer { display: none; }
+  .trackCourses { grid-template-columns: 1fr; }
+  .trackCourses li { grid-template-columns: 34px 1fr; gap: 10px; padding: 16px 0; border-right: 0; }
+  .trackCourses li:nth-child(odd), .trackCourses li:nth-child(even) { padding-left: 0; padding-right: 0; border-right: 0; }
+  .certificateList a { min-height: 100px; grid-template-columns: 1fr auto; gap: 14px; padding: 18px; }
+  .certificateList .certificateTitle strong { font-size: 15px; }
+  .certificateAction { font-size: 0; gap: 0; }
   footer { grid-template-columns: 1fr; margin-top: 36px; }
 }

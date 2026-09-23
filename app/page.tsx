@@ -4,6 +4,18 @@ import { useEffect, useState } from "react";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M5.2 7.9H1.6V19h3.6V7.9ZM3.4 2.4a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 0 0 0-4.2ZM11 7.9H7.5V19H11v-5.5c0-1.4.3-2.8 2.1-2.8 1.8 0 1.8 1.7 1.8 2.9V19h3.6v-6.1c0-3-0.7-5.3-4.2-5.3-1.7 0-2.8.9-3.3 1.8V7.9Z" />
+  </svg>
+);
+
+const GitHubIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2.2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 2.9.9.1-.7.4-1.1.7-1.4-2.2-.3-4.6-1.1-4.6-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.7 9.7 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.6 4.9.4.3.7.9.7 1.8v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2.2Z" />
+  </svg>
+);
+
 const modules = [
   ["DATA", "Data Analytics with R", "Data Analysis and Programming"],
   ["INFERENCE", "Statistical Inference for Data Science", "Estimation and Inference"],
@@ -98,9 +110,9 @@ export default function Home() {
         <div className="headerActions">
           <nav aria-label="Primary navigation">
             <a href="#about">About</a>
+            <a href="#certificates">Certs</a>
             <a href="#projects">Projects</a>
             <a href="#school">School</a>
-            <a href="#certificates">Certs</a>
           </nav>
           <button
             className="themeToggle"
@@ -128,21 +140,32 @@ export default function Home() {
           <div className="aboutCopy">
             <h2>Hello, I&apos;m Chetan.</h2>
             <p>
-              I&apos;m an undergraduate at Singapore Management University pursuing a BSc (Economics) with a 2nd Major in Data Science &amp; Analytics, with an expected graduation in April 2028.
+              I am an undergraduate at Singapore Management University pursuing a BSc (Economics) with a second major in Data Science and Analytics, and I expect to graduate in April 2028.
             </p>
             <p>
-              My experience in finance and operations showed me how much I enjoy analysing data, uncovering patterns and drawing meaningful conclusions from it. I&apos;m now building on that foundation through statistics, econometrics and hands-on analytics projects as I work towards becoming a data analyst who can turn complex datasets into clear, practical insights.
+              My experience in finance and operations sparked my interest in using data to understand problems and support better decisions. I have since developed practical skills in SQL, Excel, R and Python through university coursework, professional certification and hands-on projects involving data cleaning, exploratory analysis, statistical analysis, regression and forecasting. I am also expanding my knowledge of artificial intelligence through further training and applied learning.
             </p>
             <p>
-              This site is a record of that learning: what I have built, what I have studied and the tools I am becoming more confident with.
+              This portfolio showcases the projects I have built, the insights I have uncovered and the technical skills I continue to strengthen as I pursue a career in data analytics.
             </p>
           </div>
 
           <aside className="profilePanel" aria-label="Profile links and skills">
-            <div>
+            <div className="findMePanel">
               <p className="miniLabel">FIND ME</p>
-              <a href="https://www.linkedin.com/in/chetan-kishnani/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
-              <a href="https://github.com/chetankish" target="_blank" rel="noreferrer">GitHub <Arrow /></a>
+              <p className="findMeIntro">Connect with me or explore the work behind this portfolio.</p>
+              <div className="socialLinks">
+                <a className="socialCard socialCardLinkedIn" href="https://www.linkedin.com/in/chetan-kishnani/" target="_blank" rel="noreferrer">
+                  <span className="socialIcon"><LinkedInIcon /></span>
+                  <span><strong>LinkedIn</strong><small>Professional profile</small></span>
+                  <Arrow />
+                </a>
+                <a className="socialCard socialCardGitHub" href="https://github.com/chetankish" target="_blank" rel="noreferrer">
+                  <span className="socialIcon"><GitHubIcon /></span>
+                  <span><strong>GitHub</strong><small>Code and repositories</small></span>
+                  <Arrow />
+                </a>
+              </div>
             </div>
             <div>
               <p className="miniLabel">TOOLS</p>
@@ -157,7 +180,7 @@ export default function Home() {
       </section>
 
       <section className="notebookSection" id="projects">
-        <div className="sectionLabel">02 — PROJECTS</div>
+        <div className="sectionLabel">03 — PROJECTS</div>
         <div className="projectHeader">
           <div>
             <p className="miniLabel">FEATURED CASE STUDY / INDIVIDUAL PROJECT</p>
@@ -203,7 +226,7 @@ export default function Home() {
       </section>
 
       <section className="notebookSection school" id="school">
-        <div className="sectionLabel">03 — SCHOOL</div>
+        <div className="sectionLabel">04 — EDUCATION</div>
         <div className="schoolIntro">
           <div>
             <p className="miniLabel">SINGAPORE MANAGEMENT UNIVERSITY</p>
@@ -228,62 +251,47 @@ export default function Home() {
       </section>
 
       <section className="notebookSection" id="certificates">
-        <div className="sectionLabel">04 — COURSES &amp; CERTIFICATIONS</div>
+        <div className="sectionLabel">02 — COURSES &amp; CERTIFICATIONS</div>
         <details
           className="professionalCertification"
           open={certificationOpen}
           onToggle={(event) => setCertificationOpen(event.currentTarget.open)}
         >
           <summary className="certificationGroupTitle">
-            <span aria-hidden="true" />
-            <strong>Associate Data Analyst in SQL Certification</strong>
-            <span aria-hidden="true" />
-            <span className="trackToggle" aria-hidden="true">{certificationOpen ? "⌃" : "⌄"}</span>
+            <span className="certificationSummaryCopy">
+              <small>DATACAMP PROFESSIONAL CREDENTIAL</small>
+              <strong>Associate Data Analyst in SQL</strong>
+              <span>1 CERTIFICATION · 1 CAREER TRACK · 11 COURSES</span>
+            </span>
+            <span className="certificationToggle" aria-hidden="true">
+              {certificationOpen ? "CLOSE" : "EXPLORE"}
+              <span>{certificationOpen ? "−" : "+"}</span>
+            </span>
           </summary>
           <div className="certificationBody">
-            <a
-              className="professionalCertificateRow"
-              href="/data-analyst-associate-certificate.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="trackDate">SEP 2026</span>
-              <span className="trackHeading">
+            <div className="credentialGrid">
+              <a className="credentialCard credentialCardPrimary" href="/data-analyst-associate-certificate.pdf" target="_blank" rel="noreferrer">
+                <span className="credentialMeta"><small>CERTIFICATION</small><span>SEP 2026</span></span>
                 <strong>Data Analyst Associate</strong>
-                <small>Data management, data validation, exploratory analysis, statistical analysis and data-driven decision-making.</small>
-              </span>
-              <span className="trackIssuer">
-                <small>CERTIFICATION</small>
-                <span>DataCamp</span>
-              </span>
-              <Arrow />
-            </a>
-            <a
-              className="careerTrackRow"
-              href="https://www.datacamp.com/statement-of-accomplishment/track/573ead8928aa8acab876fdd12e21bfca48a3fafc?raw=1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span className="trackDate">SEP 2026</span>
-              <span className="trackHeading">
+                <p>Data management, validation, exploratory analysis, statistics and data-driven decision-making.</p>
+                <span className="credentialAction">VIEW CERTIFICATE <Arrow /></span>
+              </a>
+              <a className="credentialCard" href="https://www.datacamp.com/statement-of-accomplishment/track/573ead8928aa8acab876fdd12e21bfca48a3fafc?raw=1" target="_blank" rel="noreferrer">
+                <span className="credentialMeta"><small>CAREER TRACK</small><span>SEP 2026</span></span>
                 <strong>Associate Data Analyst in SQL</strong>
-                <small>Completed 11-course career track</small>
-              </span>
-              <span className="trackIssuer">
-                <small>CAREER TRACK</small>
-                <span>DataCamp</span>
-              </span>
-              <Arrow />
-            </a>
+                <p>Completed an 11-course pathway covering SQL analysis, statistics, visualisation and communication.</p>
+                <span className="credentialAction">VIEW CAREER TRACK <Arrow /></span>
+              </a>
+            </div>
+            <div className="courseworkHeader">
+              <span>COURSEWORK</span>
+              <span>11 COURSES</span>
+            </div>
             <ol className="trackCourses">
               {sqlTrackCourses.map((course, index) => (
                 <li key={course.title}>
                   <span className="courseNumber">{String(index + 1).padStart(2, "0")}</span>
                   <span className="courseName">{course.title}</span>
-                  <span className="courseIssuer">
-                    <small>COURSE</small>
-                    <span>DataCamp</span>
-                  </span>
                 </li>
               ))}
             </ol>
@@ -292,16 +300,15 @@ export default function Home() {
         <div className="certificateList">
           {certificates.map((cert) => (
             <a key={cert.title} href={cert.href} target="_blank" rel="noreferrer">
-              <span>{cert.date}</span>
               <span className="certificateTitle">
+                <small>{cert.issuer.toUpperCase()}</small>
                 <strong>{cert.title}</strong>
-                {cert.track && <small>{cert.track}</small>}
+                <span>{cert.type}</span>
               </span>
-              <span className="certificateIssuer">
-                <small>{cert.type}</small>
-                <span>{cert.issuer}</span>
+              <span className="certificateAction" aria-hidden="true">
+                VIEW
+                <span><Arrow /></span>
               </span>
-              <Arrow />
             </a>
           ))}
         </div>
