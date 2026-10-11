@@ -168,11 +168,11 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .careerTrackRow { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .15s ease; }
 .trackActions { margin-bottom: 22px; }
 .trackCertificate { padding-bottom: 5px; border-bottom: 2px solid var(--ink); font: 650 13px var(--mono); white-space: nowrap; }
-.trackCourses { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; list-style: none; }
+.trackCourses { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(6, auto); grid-auto-flow: column; list-style: none; }
 .trackCourses li { min-height: 62px; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 14px; border-bottom: 1px solid var(--line); }
-.trackCourses li:nth-child(odd) { padding-right: 22px; border-right: 1px solid var(--line); }
-.trackCourses li:nth-child(even) { padding-left: 22px; }
-.trackCourses li:last-child { border-bottom: 0; }
+.trackCourses li:nth-child(-n+6) { padding-right: 22px; border-right: 1px solid var(--line); }
+.trackCourses li:nth-child(n+7) { padding-left: 22px; }
+.trackCourses li:nth-child(6), .trackCourses li:last-child { border-bottom: 0; }
 .courseNumber { color: var(--muted); font: 500 13px var(--mono); }
 .courseName { font: 550 13px/1.4 var(--mono); }
 .courseIssuer { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 500 13px var(--mono); }
@@ -215,9 +215,10 @@ footer a { color: var(--ink); }
   .professionalCertificateRow .trackIssuer, .careerTrackRow .trackIssuer { display: none; }
   .trackHeading { grid-column: 1 / -1; }
   .trackIssuer { display: none; }
-  .trackCourses { grid-template-columns: 1fr; }
+  .trackCourses { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
   .trackCourses li { grid-template-columns: 34px 1fr; gap: 10px; padding: 16px 0; border-right: 0; }
   .trackCourses li:nth-child(odd), .trackCourses li:nth-child(even) { padding-left: 0; padding-right: 0; border-right: 0; }
+  .trackCourses li:nth-child(6) { border-bottom: 1px solid var(--line); }
   .certificateList a { min-height: 100px; grid-template-columns: 1fr auto; gap: 14px; padding: 18px; }
   .certificateList .certificateTitle strong { font-size: 15px; }
   .certificateAction { font-size: 0; gap: 0; }
