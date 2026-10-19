@@ -17,12 +17,12 @@ const GitHubIcon = () => (
 );
 
 const modules = [
-  ["DATA", "Data Analytics with R", "Data Analysis and Programming"],
-  ["INFERENCE", "Statistical Inference for Data Science", "Estimation and Inference"],
-  ["MACHINE LEARNING", "Machine Learning and Applications", "Predictive Modelling"],
-  ["PROBABILITY", "Probability Theory and Application", "Probability Modelling"],
-  ["ECONOMETRICS", "Intermediate Econometrics", "Regression and Causal Methods"],
-  ["STATISTICS", "Introduction to Statistical Theory", "Statistical Foundations"],
+  ["Data Analytics with R", "Data Analysis and Programming"],
+  ["Statistical Inference for Data Science", "Estimation and Inference"],
+  ["Machine Learning and Applications", "Predictive Modelling"],
+  ["Probability Theory and Application", "Probability Modelling"],
+  ["Intermediate Econometrics", "Regression and Causal Methods"],
+  ["Introduction to Statistical Theory", "Statistical Foundations"],
 ];
 
 const sqlTrackCourses = [
@@ -272,9 +272,8 @@ export default function Home() {
         </div>
         <p className="tableTitle">SELECTED DATA-RELATED MODULES</p>
         <div className="moduleTable">
-          {modules.map(([code, title, focus]) => (
+          {modules.map(([title, focus]) => (
             <div className="moduleRow" key={title}>
-              <span>{code}</span>
               <strong>{title}</strong>
               <p>{focus}</p>
             </div>
