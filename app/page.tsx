@@ -64,6 +64,13 @@ const sqlTrackCourses = [
 const certificates = [
   {
     type: "COURSE",
+    date: "OCT 2026",
+    title: "AI100: Python Programming & Data Visualisation",
+    issuer: "Heicoders Academy",
+    href: null,
+  },
+  {
+    type: "COURSE",
     date: "AUG 2026",
     title: "Introduction to Power BI",
     issuer: "DataCamp",
@@ -85,8 +92,33 @@ const certificates = [
   },
 ];
 
+function CertificateEntry({ cert }: { cert: (typeof certificates)[number] }) {
+  const content = (
+    <>
+      <span className="certificateTitle">
+        <small>{cert.issuer.toUpperCase()}</small>
+        <strong>{cert.title}</strong>
+        <span>{cert.type} · {cert.date}</span>
+      </span>
+      <span className="certificateAction" aria-hidden="true">
+        {cert.href ? "VIEW" : "COMPLETED"}
+        <span>{cert.href ? <Arrow /> : "✓"}</span>
+      </span>
+    </>
+  );
+
+  return cert.href ? (
+    <a className="certificateEntry" href={cert.href} target="_blank" rel="noreferrer">
+      {content}
+    </a>
+  ) : (
+    <div className="certificateEntry">{content}</div>
+  );
+}
+
 export default function Home() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [ai100Open, setAi100Open] = useState(false);
   const [certificationOpen, setCertificationOpen] = useState(false);
 
   useEffect(() => {
@@ -169,7 +201,7 @@ export default function Home() {
             </div>
             <div>
               <p className="miniLabel">TOOLS</p>
-              <p>SQL / Excel / R / Python</p>
+              <p>SQL / Excel / R / Python / Pandas / Matplotlib</p>
             </div>
             <div>
               <p className="miniLabel">METHODS</p>
@@ -254,6 +286,37 @@ export default function Home() {
         <div className="sectionLabel">02 — COURSES &amp; CERTIFICATIONS</div>
         <details
           className="professionalCertification"
+          open={ai100Open}
+          onToggle={(event) => setAi100Open(event.currentTarget.open)}
+        >
+          <summary className="certificationGroupTitle">
+            <span className="certificationSummaryCopy">
+              <small>HEICODERS ACADEMY</small>
+              <strong>AI100: Python Programming &amp; Data Visualisation</strong>
+              <span>COMPLETED · OCT 2026</span>
+            </span>
+            <span className="certificationToggle" aria-hidden="true">
+              {ai100Open ? "CLOSE" : "EXPLORE"}
+              <span>{ai100Open ? "−" : "+"}</span>
+            </span>
+          </summary>
+          <div className="certificationBody ai100Body">
+            <div className="courseworkHeader">
+              <span>COURSE HIGHLIGHTS</span>
+            </div>
+            <div className="ai100Highlights">
+              <ul className="ai100Topics">
+                <li><strong>Python Programming</strong><span>Variables, data structures, loops, conditionals and functions.</span></li>
+                <li><strong>Data Manipulation</strong><span>Data cleaning and transformation using Pandas.</span></li>
+                <li><strong>Exploratory Data Analysis</strong><span>Identifying patterns, trends and insights.</span></li>
+                <li><strong>Data Visualisation</strong><span>Creating charts using Matplotlib.</span></li>
+                <li><strong>Practical Application</strong><span>Hands-on assignments and a capstone project.</span></li>
+              </ul>
+            </div>
+          </div>
+        </details>
+        <details
+          className="professionalCertification"
           open={certificationOpen}
           onToggle={(event) => setCertificationOpen(event.currentTarget.open)}
         >
@@ -298,18 +361,8 @@ export default function Home() {
           </div>
         </details>
         <div className="certificateList">
-          {certificates.map((cert) => (
-            <a key={cert.title} href={cert.href} target="_blank" rel="noreferrer">
-              <span className="certificateTitle">
-                <small>{cert.issuer.toUpperCase()}</small>
-                <strong>{cert.title}</strong>
-                <span>{cert.type}</span>
-              </span>
-              <span className="certificateAction" aria-hidden="true">
-                VIEW
-                <span><Arrow /></span>
-              </span>
-            </a>
+          {certificates.slice(1).map((cert) => (
+            <CertificateEntry key={cert.title} cert={cert} />
           ))}
         </div>
       </section>

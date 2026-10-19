@@ -132,7 +132,7 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .moduleRow strong { font: 550 15px var(--mono); }
 .moduleRow p { margin: 0; color: var(--muted); font-size: 14px; }
 .certificateList { margin-top: 14px; display: grid; gap: 14px; }
-.professionalCertification { margin-top: 34px; border: 0; }
+.professionalCertification { margin-top: 14px; border: 0; }
 .professionalCertification summary { cursor: pointer; list-style: none; transition: background .15s ease; }
 .professionalCertification summary::-webkit-details-marker { display: none; }
 .professionalCertification summary:hover { background: var(--blue-paper); }
@@ -162,6 +162,13 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .credentialCard p { margin: 10px 0 24px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .credentialAction { margin-top: auto; color: var(--blue); font: 650 13px var(--mono); }
 .courseworkHeader { margin-top: 26px; padding: 0 0 12px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--ink); color: var(--orange); font: 650 13px var(--mono); letter-spacing: .06em; }
+.ai100Body { padding-bottom: 18px; }
+.ai100Body .courseworkHeader { margin-top: 0; }
+.ai100Highlights { margin-top: 16px; padding: 22px 24px; border: 1px solid var(--line); background: color-mix(in srgb, var(--blue-paper) 30%, var(--panel)); }
+.ai100Topics { margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; list-style: none; }
+.ai100Topics li { position: relative; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.ai100Topics li::before { content: ">"; position: absolute; top: 1px; left: 0; color: var(--blue); font: 650 13px/1.55 var(--mono); }
+.ai100Topics strong { color: var(--ink); font-family: var(--mono); font-weight: 650; }
 .professionalCertificateRow, .careerTrackRow { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); transition: background .15s ease; }
 .professionalCertificateRow:hover, .careerTrackRow:hover { background: var(--blue-paper); }
 .professionalCertificateRow>span:last-child, .careerTrackRow>span:last-child { color: var(--blue); font-size: 17px; }
@@ -177,7 +184,7 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .courseName { font: 550 13px/1.4 var(--mono); }
 .courseIssuer { display: flex; align-items: center; gap: 10px; color: var(--muted); font: 500 13px var(--mono); }
 .courseIssuer small { padding: 4px 7px; border: 1px solid var(--line); color: var(--blue); font: 600 13px var(--mono); letter-spacing: .08em; }
-.certificateList a { min-height: 112px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--blue); background: color-mix(in srgb, var(--blue-paper) 22%, var(--panel)); transition: border-color .15s ease, background-color .15s ease, transform .15s ease; }
+.certificateList .certificateEntry { min-height: 112px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px; padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--blue); background: color-mix(in srgb, var(--blue-paper) 22%, var(--panel)); transition: border-color .15s ease, background-color .15s ease, transform .15s ease; }
 .certificateList a:hover { border-color: var(--blue); background: var(--blue-paper); transform: translateX(3px); }
 .certificateList .certificateTitle { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; color: var(--ink); }
 .certificateList .certificateTitle small { color: var(--blue); font: 650 13px var(--mono); letter-spacing: .08em; }
@@ -220,8 +227,10 @@ footer a { color: var(--ink); }
   .trackCourses li:nth-child(odd), .trackCourses li:nth-child(even) { padding-left: 0; padding-right: 0; border-right: 0; }
   .trackCourses li:nth-child(6) { border-bottom: 1px solid var(--line); }
   .trackCourses li:last-child { border-bottom: 0; }
-  .certificateList a { min-height: 100px; grid-template-columns: 1fr auto; gap: 14px; padding: 18px; }
+  .certificateList .certificateEntry { min-height: 100px; grid-template-columns: 1fr auto; gap: 14px; padding: 18px; }
   .certificateList .certificateTitle strong { font-size: 15px; }
+  .ai100Highlights { padding: 18px; }
+  .ai100Topics { grid-template-columns: 1fr; gap: 14px; }
   .certificateAction { font-size: 0; gap: 0; }
   footer { grid-template-columns: 1fr; margin-top: 36px; }
 }
