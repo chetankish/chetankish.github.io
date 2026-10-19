@@ -17,12 +17,12 @@ const GitHubIcon = () => (
 );
 
 const modules = [
-  ["Data Analytics with R", "Data Analysis and Programming"],
-  ["Statistical Inference for Data Science", "Estimation and Inference"],
-  ["Machine Learning and Applications", "Predictive Modelling"],
-  ["Probability Theory and Application", "Probability Modelling"],
-  ["Intermediate Econometrics", "Regression and Causal Methods"],
-  ["Introduction to Statistical Theory", "Statistical Foundations"],
+  "Data Analytics with R",
+  "Statistical Inference for Data Science",
+  "Machine Learning and Applications",
+  "Probability Theory and Application",
+  "Intermediate Econometrics",
+  "Introduction to Statistical Theory",
 ];
 
 const sqlTrackCourses = [
@@ -272,10 +272,9 @@ export default function Home() {
         </div>
         <p className="tableTitle">SELECTED DATA-RELATED MODULES</p>
         <div className="moduleTable">
-          {modules.map(([title, focus]) => (
+          {modules.map((title) => (
             <div className="moduleRow" key={title}>
               <strong>{title}</strong>
-              <p>{focus}</p>
             </div>
           ))}
         </div>
@@ -310,6 +309,7 @@ export default function Home() {
                 <li><strong>Exploratory Data Analysis</strong><span>Identifying patterns, trends and insights.</span></li>
                 <li><strong>Data Visualisation</strong><span>Creating charts using Matplotlib.</span></li>
                 <li><strong>Practical Application</strong><span>Hands-on assignments and a capstone project.</span></li>
+                <li><strong>Problem Solving</strong><span>Applied logical thinking and debugging techniques to identify and resolve coding errors.</span></li>
               </ul>
             </div>
           </div>
