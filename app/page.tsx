@@ -67,7 +67,7 @@ const certificates = [
     date: "OCT 2026",
     title: "AI100: Python Programming & Data Visualisation",
     issuer: "Heicoders Academy",
-    href: null,
+    href: "/ai100-python-data-visualisation-certificate.pdf",
   },
   {
     type: "COURSE",
@@ -312,6 +312,14 @@ export default function Home() {
                 <li><strong>Problem Solving</strong><span>Applied logical thinking and debugging techniques to identify and resolve coding errors.</span></li>
               </ul>
             </div>
+            <a
+              className="ai100CertificateLink"
+              href="/ai100-python-data-visualisation-certificate.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              VIEW CERTIFICATE <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </details>
         <details

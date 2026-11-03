@@ -167,6 +167,8 @@ h2 { margin: 0; font: 600 clamp(38px, 5vw, 68px)/1.03 var(--mono); letter-spacin
 .ai100Topics li { position: relative; padding-left: 16px; display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 13px; line-height: 1.55; }
 .ai100Topics li::before { content: ">"; position: absolute; top: 1px; left: 0; color: var(--blue); font: 650 13px/1.55 var(--mono); }
 .ai100Topics strong { color: var(--ink); font-family: var(--mono); font-weight: 650; }
+.ai100CertificateLink { width: fit-content; margin-top: 16px; padding: 11px 14px; display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--blue); color: var(--blue); font: 650 13px var(--mono); letter-spacing: .06em; transition: color .15s ease, background-color .15s ease, transform .15s ease; }
+.ai100CertificateLink:hover { color: var(--panel); background: var(--blue); transform: translateY(-1px); }
 .professionalCertificateRow, .careerTrackRow { min-height: 94px; display: grid; grid-template-columns: .6fr 2fr .8fr auto; align-items: center; gap: 24px; border-bottom: 1px solid var(--line); transition: background .15s ease; }
 .professionalCertificateRow:hover, .careerTrackRow:hover { background: var(--blue-paper); }
 .professionalCertificateRow>span:last-child, .careerTrackRow>span:last-child { color: var(--blue); font-size: 17px; }
