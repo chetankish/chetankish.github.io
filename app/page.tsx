@@ -102,7 +102,7 @@ function CertificateEntry({ cert }: { cert: (typeof certificates)[number] }) {
       </span>
       <span className="certificateAction" aria-hidden="true">
         {cert.href ? "VIEW" : "COMPLETED"}
-        <span>{cert.href ? <Arrow /> : "✓"}</span>
+        <span>{cert.href ? "↗" : "✓"}</span>
       </span>
     </>
   );
@@ -294,8 +294,7 @@ export default function Home() {
               <span>COMPLETED · OCT 2026</span>
             </span>
             <span className="certificationToggle" aria-hidden="true">
-              {ai100Open ? "CLOSE" : "EXPLORE"}
-              <span>{ai100Open ? "−" : "+"}</span>
+              <span>{ai100Open ? "⌃" : "⌄"}</span>
             </span>
           </summary>
           <div className="certificationBody ai100Body">
@@ -334,8 +333,7 @@ export default function Home() {
               <span>1 CERTIFICATION · 1 CAREER TRACK · 11 COURSES</span>
             </span>
             <span className="certificationToggle" aria-hidden="true">
-              {certificationOpen ? "CLOSE" : "EXPLORE"}
-              <span>{certificationOpen ? "−" : "+"}</span>
+              <span>{certificationOpen ? "⌃" : "⌄"}</span>
             </span>
           </summary>
           <div className="certificationBody">
